@@ -15,9 +15,9 @@ const isloggedin=true //boolean
  let password= Symbol("12345")//symbol...it is mostly used for passing unique or confidential value e.g passwords etc;
  let password1= Symbol("12345")
  let bignum=123n; //for big values we use bigint
- console.table([Name,phone,isloggedin,ballance,email,emaill,password,password1,bignum]);
+//  console.table([Name,phone,isloggedin,ballance,email,emaill,password,password1,bignum]);
  console.log(password===password1);
 
-var x=123;
- x=2;
-console.log(x);
+// var x=123;
+//  x=2;
+// console.log(x);

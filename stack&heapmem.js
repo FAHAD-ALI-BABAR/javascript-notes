@@ -13,5 +13,5 @@ let anotheruser=userone
  let obj2=obj1;
  obj2.email="alibabar@google.com";
  obj2.id="ali.upi";
- console.log(obj1.email,obj1.id);
+ console.log(obj1.email,obj1.id);//in non-primitive datatype changes will be made in original instead of copy
  console.log(obj2.email,obj2.id);

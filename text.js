@@ -1,4 +1,4 @@
-/*const accountid = 11;
+const accountid = 11;
 let customername = "fahad ali babar";
 var customercontact = 123456789;
 customername="honey";
@@ -19,7 +19,7 @@ console.log(numbertype);
 //console.table([accountid, customername, customercontact, accountstate, accountballance,numbertype])
 //now lets suppose if we store null in score then what will happen ...lets check
 
-/* 
+
 let scoore=null;
 console.log(typeof scoore);
 console.log(typeof (scoore));
