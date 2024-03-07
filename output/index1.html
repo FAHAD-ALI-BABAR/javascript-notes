@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <ul class="language">
+        <li class="box">Monday</li>
+        <li class="box">Tuesday</li>
+        <li class="box">Wednesday</li>
+        <li class="box">Thursday</li>
+    </ul>
+</body>
+<script>
+    // function addlang(lang){
+    //    const li=document.createElement("li");//first we will create list item..then i have to select ul class then i have to append it
+    //    li.innerHTML=`${lang}`//we will add innerhtml in li whatever we have passed in lang as parameter
+    //    document.querySelector(".language").appendChild(li)
+    // }
+    // addlang("python")
+    //this is more optimized way 
+    function addoptimilang(lang){
+        const li=document.createElement("li");
+        const optlan=document.createTextNode(lang);
+        li.appendChild(optlan);
+        document.querySelector(".language").appendChild(li)
+    }
+    addoptimilang("ruby");
+    addoptimilang(".NET");
+    addoptimilang("golang")
+    //to edit
+    const seclang=document.querySelector("li:nth-child(2)")
+    seclang.innerHTML="FAHAD aLI bABAR"
+    //to remove
+    const rep=document.querySelector("li:last-child")
+    rep.remove();
+</script>
+</html>
