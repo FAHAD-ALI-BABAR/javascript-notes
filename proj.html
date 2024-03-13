@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DOM PROJECT</title>
+    <style>
+
+        div{
+            margin-top: 50px;
+        }
+        .button{
+            width: 30px;
+            height: 20px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        #grey{
+            background-color: gray;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="button" id="grey">grey</span>
+        <span class="button" id="blue">blue</span>
+        <span class="button" id="green">green</span>
+        <span class="button" id="yellow">yellow</span>
+    </div>
+    <script>
+        const body1=document.querySelector("body");
+const buttons=document.querySelectorAll(".button");
+buttons.forEach(function(button1){
+    button1.addEventListener("click",function(clicks){
+        console.log(clicks);
+        console.log(clicks.target);
+        if(clicks.target.id==="grey"){
+            body1.style.backgroundColor=clicks.target.id;
+        }
+        if(clicks.target.id==="blue"){
+            body1.style.backgroundColor=clicks.target.id;
+        }
+        if(clicks.target.id==="green"){
+            body1.style.backgroundColor=clicks.target.id;
+        }
+        if(clicks.target.id==="yellow"){
+            body1.style.backgroundColor=clicks.target.id;
+        }
+    });
+});
+    </script>
+</body>
+</html>
