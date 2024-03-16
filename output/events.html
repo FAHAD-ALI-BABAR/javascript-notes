@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in javascript</title>
+</head>
+<body>
+    <h1>IMAGE GALLERY</h1>
+    <div>
+        <ul class="img-gallery">
+            <li><img style="height: 100px; width: 100px;" src="../woem-flower.jpeg" alt="img" id="flower"></li>
+            <li><img style="height: 100px; width: 100px;" src="../beach.jpeg" alt="img" id="rose"></li>
+            <li><img style="height: 100px; width: 100px;" src="../sunshine.jpeg" alt="img" id="jasmine"></li>
+            <li><img style="height: 100px; width: 100px;" src="../lake.jpeg" alt="img" id="tulip" ></li>
+        </ul>
+    </div>
+</body>
+<script>
+   /* document.querySelector(".img-gallery").addEventListener("click", function(e){
+        console.log("clicked inside the ul");
+    },false)//this false is default wehter you add or not it will behave as false but if you add true then it will behave differently(event propagation)
+    document.querySelector("#flower").addEventListener("click", function(e){
+        console.log("clicked on flower");
+    })
+    document.querySelector("#rose").addEventListener("click", function(e){
+        console.log("clicked on rose");
+    })*/// open on inpect and see the behaviour..the execution bubble will go from bottom to top..this is called event propagation it means bubbling up(bottom to top)
+// now we will see event capturing
+   /* document.querySelector(".img-gallery").addEventListener("click", function(e){
+        console.log("clicked inside the ul");
+    },true)
+    document.querySelector("#flower").addEventListener("click", function(e){
+        console.log("clicked on flower");
+    },true)
+    document.querySelector("#rose").addEventListener("click", function(e){
+        console.log("clicked on rose");
+    },true)//if i use true then execution bubble will go from top to bottom this is called event capturing
+*/
+    //if you want that your event don't bubble to top and act as individual then we will stop the bubbling like this
+    document.querySelector(".img-gallery").addEventListener("click", function(e){
+        console.log("clicked inside the ul");
+        e.stopPropagation();
+        
+    },false)
+    document.querySelector("#flower").addEventListener("click", function(e){
+        console.log("clicked on flower");
+        e.stopPropagation();
+    },false)
+    document.querySelector("#rose").addEventListener("click", function(e){
+        console.log("clicked on rose");
+        e.stopPropagation();
+       
+    })
+   /* const body=document.querySelector("body");
+    const pic=document.querySelector(".img-gallery");
+    pic.addEventListener("click", function(click){
+        if(click.target.id=="flower"){
+            alert("flower");
+        }
+        if(click.target.id=="rose"){
+            alert("rose");
+        }
+        if(click.target.id=="jasmine"){
+            alert("jasmine");
+        }
+        if(click.target.id=="tulip"){
+            alert("tulip");
+        }
+        //what i have to study in events
+        //type, timestamp, defaultprevented, 
+        //target, to element, source element, currenttarget
+        //clientX, clientY, screenX, screenY,
+        //altkey,ctrlkey, shiftkey, keycode 
+    })*/
+   
+</script>
+</html>
