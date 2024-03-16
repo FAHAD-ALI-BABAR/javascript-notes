@@ -13,10 +13,31 @@
             <li><img style="height: 100px; width: 100px;" src="../beach.jpeg" alt="img" id="rose"></li>
             <li><img style="height: 100px; width: 100px;" src="../sunshine.jpeg" alt="img" id="jasmine"></li>
             <li><img style="height: 100px; width: 100px;" src="../lake.jpeg" alt="img" id="tulip" ></li>
+            <li><a href="" id="fahad">LINKEDIN</a></li>
         </ul>
     </div>
 </body>
 <script>
+    /*const parent=document.querySelector(".img-gallery");
+    parent.addEventListener("click", function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName=="IMG"){
+            let removeit=e.target.parentNode;
+            removeit.remove();
+        }
+    })*/
+   /* const parent=document.querySelector(".img-gallery")
+    parent.addEventListener("click", function(click){
+        console.log(click.target.parentNode);
+        let removeit=click.target.parentNode;
+        removeit.remove();
+      
+    })*/
+   // const linkedin=document.querySelector("#fahad");
+    //linkedin.addEventListener("click", function(click){
+      //  click.preventDefault();//now on clicking this link it will not render us to that page
+       // console.log("clicked link");
+  //  })
    /* document.querySelector(".img-gallery").addEventListener("click", function(e){
         console.log("clicked inside the ul");
     },false)//this false is default wehter you add or not it will behave as false but if you add true then it will behave differently(event propagation)
@@ -38,7 +59,7 @@
     },true)//if i use true then execution bubble will go from top to bottom this is called event capturing
 */
     //if you want that your event don't bubble to top and act as individual then we will stop the bubbling like this
-    document.querySelector(".img-gallery").addEventListener("click", function(e){
+   /* document.querySelector(".img-gallery").addEventListener("click", function(e){
         console.log("clicked inside the ul");
         e.stopPropagation();
         
@@ -51,7 +72,7 @@
         console.log("clicked on rose");
         e.stopPropagation();
        
-    })
+    })*/
    /* const body=document.querySelector("body");
     const pic=document.querySelector(".img-gallery");
     pic.addEventListener("click", function(click){

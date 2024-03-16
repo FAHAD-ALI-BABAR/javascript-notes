@@ -6,32 +6,17 @@
     <title>DOM PROJECT</title>
 </head>
 <body>
-    <h1>BMI CALCULATOR</h1>
-    <form action="#" method="post">
-        <label for="height">height:</label>
-        <input type="text" id="height" name="height" ><br>
-        <label for="weight">weight:</label>
-        <input type="text" id="weight" name="weight" ><br>
-        <input type="submit" value="calculate" id="result">
-    </form>
+    <h1>CLOCK</h1>
+    <P>CURRENT TIME IS:</P>
+    <div id="clock" style="background-color: pink;border-radius: 10px; width: 90px;height: 30px; padding:20px;"></div>
     <script>
-       const form = document.querySelector("form")
-form.addEventListener("submit", function (event){
-    event.preventDefault(); // Corrected to use the 'event' parameter
-    const height = parseInt(document.querySelector("#height").value)
-    const weight = parseInt(document.querySelector("#weight").value)
-    const result = document.querySelector("#result")
-
-    if(  height < 0 || isNaN(height)){
-        result.innerHTML = `please give valid height ${height}`;
-    } else if( weight < 0 || isNaN(weight)){
-        result.innerHTML = `please enter valid weight ${weight}`;
-    } else {
-        const BMI = (weight / ((height * height) / 10000)).toFixed(2);
-        result.innerHTML = `<span>your bmi is:${BMI}</span>`;
-    }
-});
-
+        const clock=document.getElementById("clock");
+        setInterval(function(){
+            let date =new Date();
+            clock.innerHTML=date.toLocaleTimeString();
+        },1000);//1000 means mili second means after 1000ms this function called set intervaal will run
     </script>
+
+   
 </body>
 </html>
