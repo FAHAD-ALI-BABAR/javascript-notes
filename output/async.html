@@ -1,0 +1,39 @@
+//function settimeout
+//settimeout function will execute the program after your given interval of time but only one time
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>My name  is fahad</h1>
+    <button id="button">start</button>
+    <button id="button1">end</button>
+</body>
+<script>
+    
+   // setTimeout(() => {
+       // console.log("my name is fahad");
+  //  }, (2000));//this 2000ms means my statement will execute for one time after 2000miliseconds
+//now we will do this in another way
+//const myname=function(){
+    ///console.log("fahad Ali Babar")
+//}
+//setTimeout(myname,2000);//now important thing to note here is we have to give refernce in settimeout not execution and also the time interval
+//myname(this refernce)....myname()(this is execution)
+
+//now we will study cleartimeout
+//suppose you want to stop settimeout eecution then we will use cleartime out
+/*const changedheading=function(){
+    document.querySelector("h1").innerHTML="I am a web developer";
+}
+const tostop=setTimeout(changedheading,3000);
+const button=document.querySelector("#button")
+button.addEventListener("click",function(){
+    clearTimeout(tostop);
+    console.log("sucessfully executed");
+})*/
+</script>
+</html>
