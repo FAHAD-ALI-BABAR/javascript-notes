@@ -15,3 +15,19 @@ function fahad(a=10){
     console.log(a);
 }
 console.log(fahad());
+//argument are the values we give in function declaration
+//parameters are the values we accept in function defination
+
+
+let z=[1,2,3,4,5,6,7];
+z.push(10);
+console.log(z);
+z.pop();
+console.log(z);
+z.shift();
+console.log(z);
+z.unshift(20)//it is used to add value at the start of array
+console.log(z);
+
+z.splice(3,3);//first parameter shows which index to remove and second parameter show from that index how many next value
+console.log(z);
