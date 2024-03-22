@@ -34,14 +34,18 @@
 
 // let y=12;
 // var x=12;
-let a=[1,2,3,4,5];
-let b=a;
-b.pop();
-console.log(b);
-console.log(a);//now the result would be change in b and akso in a to stop this we use spread operator
-//now this will pop only from t not from r
-let r=[2,3,4,5,6,7,8]
-let t=[...r];
-t.pop();
-console.log(t);
-console.log(r);
+// let a=[1,2,3,4,5];
+// let b=a;
+// b.pop();
+// console.log(b);
+// console.log(a);//now the result would be change in b and akso in a to stop this we use spread operator
+// //now this will pop only from t not from r
+// let r=[2,3,4,5,6,7,8]
+// let t=[...r];
+// t.pop();
+// console.log(t);
+// console.log(r);
+let a=[1,2,3,4,5,6,7,8,9];
+a.forEach((val)=>{
+    console.log(val+5);
+})
