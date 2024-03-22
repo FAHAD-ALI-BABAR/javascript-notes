@@ -49,3 +49,14 @@ let a=[1,2,3,4,5,6,7,8,9];
 a.forEach((val)=>{
     console.log(val+5);
 })
+//how to delete value from object
+
+let z={
+    name:"fahad",
+    age:19,
+    education:"bsc"
+}
+console.log(z);
+console.table(z)
+delete z.education;
+console.log(z);
