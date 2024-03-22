@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bulb{
+            margin: 50px;
+            height:400px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        button{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 100px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="bulb">
+       
+    </div>
+    <button>ON</button>
+</body>
+<script>
+    let bulb=document.querySelector(".bulb")
+    let on=document.querySelector("button")
+    let flag=0;
+    on.addEventListener("click", function(){
+        flag++;
+        if(flag % 2 !=0){
+        bulb.style.backgroundColor="yellow";
+        // bulb.innerHTML="<h1>fahad</h1>"
+        }else{
+            bulb.style.backgroundColor="white";
+            // bulb.textContent="<h1>ali<h1>"//this is to show the difference b/w innerhtml and textcontent
+        }
+    })
+</script>
+</html>
