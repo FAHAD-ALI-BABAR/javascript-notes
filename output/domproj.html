@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+        .card{
+            padding: 50px;
+            height:500px;
+            width: 400px;
+            border-radius: 15px;
+            background-color: #fff;
+            
+        }
+        .card img{
+            height: 200px;
+            width: 300px;
+        }
+        .card h1{
+            padding-top: 20px;
+        }
+        button{
+            margin-top: 80px;
+            margin-left: 30px;
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card .friend{
+            background-color: lightgreen;
+        }
+        .card .friend:hover{
+            color: #fff;
+            background-color: black;
+            border: 1px solid white;
+        }
+        .card .remove:hover{
+            color: #fff;
+            background-color: black;
+            border: 1px solid white;
+        }
+        .card .remove{
+            background-color: white;
+        }
+        .card h3{
+       padding-top: 25px;
+       text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="img">
+            <img src="../profile.avif">
+        </div>
+        <h1>FAHAD ALI BABAR</h1>
+        <h3></h3>
+        <button class="friend">Add friend</button>
+        <button class="remove">Remove</button>
+    </div>
+</body>
+<script>
+    let card=document.querySelector(".card")
+   let img= document.querySelector(".img")
+  let heading= document.querySelector("h1")
+  let heading1=document.querySelector("h3")
+  let friend=document.querySelector(".friend")
+  let remove=document.querySelector(".remove")
+  friend.addEventListener("click", function(){
+    heading1.innerHTML="request sent"
+    heading1.style.color="green"
+  })
+  remove.addEventListener("click",()=>{
+    heading1.innerHTML="request removed"
+    heading1.style.color="red";
+  })
+</script>
+</html>
