@@ -1,21 +1,21 @@
-//high order function:function that accept function in para meter or return a function or both
+// high order function:function that accept function in para meter or return a function or both
 
-//this is high order function hello();
+// this is high order function hello();
 // function hello(value){
 
 // }
 // hello(function name(){})
 
-//another way is
+// another way is
 
 // function hello(){
 //     return function name(){}
 // }
 // hello();
 
-//both above function are high order function
+// both above function are high order function
 
-//constructor function
+// constructor function
 
 // function pet(){
 // this.name="arlo";
@@ -27,7 +27,7 @@
 // let cat2=new pet();
 // let cat3=new pet();
 // console.table(cat1);
-//we can also accept parameters
+// we can also accept parameters
 
 // function pet(color){
 //     this.name="arlo";
@@ -42,7 +42,7 @@
 //     console.log(cat2);
 //     console.log(cat3);
 
-//function prototype
+// function prototype
 
 // let dog={
 //     canfly:false,
@@ -63,16 +63,35 @@
 // console.log(Object.values(mydog));
 // console.log(Object.entries(mydog));
 
-//this keyword
+// this keyword
 //  function name(){
 //     console.log(this);
 //  }
 //  name();
 
+// let pet={
+//     name:"arlo",
+//     qualities:function(){ //now thos is method because the function inside an object is caallled a method
+//         console.log(this);
+//     }
+// }
+// pet.qualities();//
+
+call
+function abcd(){
+    console.log(this);
+}
 let pet={
     name:"arlo",
-    qualities:function(){ //now thos is method because the function inside an object is caallled a method
-        console.log(this);
-    }
 }
-pet.qualities();//
+abcd.call(pet);
+
+apply
+
+function ab(a,b,c){
+     console.log(this,a+b+c);
+}
+let obj={
+    name:"fahad",
+}
+ab.apply(obj,[5,8,9]);
