@@ -45,4 +45,4 @@
 function someFunction(param1,parem2,...parem3) {
     console.log(param1,parem2,parem3);
    }
-   someFunction("hi", "there!", "How are you?");
+   someFunction("hi", "there!", "How are you?","asdf","wertyuio");

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Let's find the treasure</h1>
+ <div id="forest">
+ <div id="tree1">
+ <div id="squirrel"></div>
+ <div id="flower"></div>
+ </div>
+ <div id="tree2">
+ <div id="shrubbery">
+ <div id="treasure"></div>
+ </div>
+ <div id="mushroom">
+ <div id="bug"></div>
+ </div>
+ </div>
+ </div> 
+  <h1 style="color:pink;">Just an example</h1>
+ <div id="one" class="example">Hi!</div>
+ <div id="two" class="example">Hi!</div>
+ <div id="three" class="something">Hi!</div>
+ <button onclick="clicked()" style=" cursor: pointer; margin: 100px; width: 100px; height: 50px; background-color: yellow; padding: 5px; border-radius: 5px; border: transparent;">CLICK HERE</button>
+</body>
+<script>
+    console.log(document.body.children.forest.children.tree2.children.shrubbery.children);
+    console.log(document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1]);
+    console.log(document.body.children.forest.children.tree2.parentElement);
+    console.log(document.body.children.forest.children.tree1.nextElementSibling);
+    console.log(document.body.children.forest.children.tree2.previousElementSibling);
+    console.log(document.getElementsByTagName("div").item("1"));
+    console.log(document.getElementsByTagName("div").namedItem("three"));
+    const clicked=()=>{
+        alert("You've clicked the button")
+    }
+
+
+</script>
+</html>

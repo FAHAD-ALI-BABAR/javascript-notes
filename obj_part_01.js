@@ -35,4 +35,4 @@
 const greetings=function(){
     console.log("hellow world");
 }
-console.log(greetings());
+greetings();
