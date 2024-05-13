@@ -10,12 +10,17 @@
     <div>Name</div>
     <div>is</div>
     <div>Fahad</div> -->
-    <div class="class">Fahad</div>
+    <!-- <div class="class">Fahad</div>
     <div class="class">Ali</div>
-    <div class="class">Babar</div>
+    <div class="class">Babar</div> -->
+    <button onclick="message(this)">Click me 1</button>
+    <button onclick="message(this)">Click me 2</button>
     
 </body>
 <script>
+    // function message(el){
+    //   console.log(el);
+    // }
 //    const div=document.getElementsByTagName("div");
 //    for(let item of div){
 //     console.log(item.innerHTML);
@@ -28,5 +33,28 @@
 // for(let item of c){
 //     console.log(item.innerHTML);
 // }
+const array=["fahad","arsal","tayyab","salamn"];
+function buildtable(){
+    const table=document.createElement("table");
+    array.forEach((name,index)=>{
+        const row=table.insertRow();
+        row.setAttribute("index-name",index);
+        row.setAttribute("data-name",name);
+        const cell=row.insertCell();
+        cell.innerHTML=name;
+        cell.classList.add("box");
+        row.onclick=()=>{
+            getData(this);
+        }
+    })
+    document.body.appendChild(table)
+}
+function getData(element){
+    const index=element.getAttribute("index-name");
+    const name=element.getAttribute("data-name");
+    document.getElementById('message').textContent = `Row: ${rowIndex}, Name: ${name}`;
+
+}
+buildtable();
 </script>
 </html>
