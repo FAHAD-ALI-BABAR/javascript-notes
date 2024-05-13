@@ -26,19 +26,23 @@
  <div id="two" class="example">Hi!</div>
  <div id="three" class="something">Hi!</div>
  <button onclick="clicked()" style=" cursor: pointer; margin: 100px; width: 100px; height: 50px; background-color: yellow; padding: 5px; border-radius: 5px; border: transparent;">CLICK HERE</button>
+ <button onclick="reveal(this)">click me</button>
+ <button onclick="reveal(this)">click me 2</button>
 </body>
 <script>
-    console.log(document.body.children.forest.children.tree2.children.shrubbery.children);
-    console.log(document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1]);
-    console.log(document.body.children.forest.children.tree2.parentElement);
-    console.log(document.body.children.forest.children.tree1.nextElementSibling);
-    console.log(document.body.children.forest.children.tree2.previousElementSibling);
-    console.log(document.getElementsByTagName("div").item("1"));
-    console.log(document.getElementsByTagName("div").namedItem("three"));
-    const clicked=()=>{
-        alert("You've clicked the button")
-    }
-
+    // console.log(document.body.children.forest.children.tree2.children.shrubbery.children);
+    // console.log(document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1]);
+    // console.log(document.body.children.forest.children.tree2.parentElement);
+    // console.log(document.body.children.forest.children.tree1.nextElementSibling);
+    // console.log(document.body.children.forest.children.tree2.previousElementSibling);
+    // console.log(document.getElementsByTagName("div").item("1"));
+    // console.log(document.getElementsByTagName("div").namedItem("three"));
+    // const clicked=()=>{
+    //     alert("You've clicked the button")
+    // }
+//     function reveal(el){
+//  console.dir(el.innerHTML);
+ 
 
 </script>
 </html>

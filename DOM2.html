@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+        }
+         div{
+            height: 100px;
+            width: 200px;
+            border-radius: 5px;
+            border: transparent;
+            background-color: yellow;
+        }
+        button{
+            height: 40px;
+            width: 100px;
+            border-radius: 0;
+            border: transparent;
+            background-color: red;
+        } 
+    </style>
+</head>
+<body>
+    <div class="shape" id="shape" ></div>
+    <button onclick="setattribute()">Set attribute</button>
+    
+</body>
+<script>
+    let count=0;
+const setattribute=()=>{
+    count+=1;
+    const div=document.querySelector("div");
+    if(count%2!=0){
+    div.setAttribute("style","background-color:orange; border-radius:100%");}
+    else{
+        div.setAttribute("style","background-color:yellow; border-radius:5px"); 
+    }
+    div.setAttribute("class","circle");
+    div.setAttribute("id","circle");
+}
+
+</script>
+</html>
